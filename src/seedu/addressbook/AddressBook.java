@@ -92,8 +92,8 @@ public class AddressBook {
     private static final String MESSAGE_USING_DEFAULT_FILE = "Using default storage file : " + DEFAULT_STORAGE_FILEPATH;
 
     // These are the prefix strings to define the data type of a command parameter
-    private static final String PERSON_DATA_PREFIX_PHONE = "p/";
-    private static final String PERSON_DATA_PREFIX_EMAIL = "e/";
+    private static final String PERSON_DATA_PREFIX_PHONE = "Phone/";
+    private static final String PERSON_DATA_PREFIX_EMAIL = "Email/";
 
     private static final String PERSON_STRING_REPRESENTATION = "%1$s " // name
                                                             + PERSON_DATA_PREFIX_PHONE + "%2$s " // phone
@@ -235,7 +235,7 @@ public class AddressBook {
     }
 
     /*
-     * NOTE : =============================================================
+    =======
      * Parameter description can be omitted from the method header comment
      * if the parameter name is self-explanatory.
      * In the method below, '@param userInput' comment has been omitted.
@@ -1163,5 +1163,7 @@ public class AddressBook {
     private static ArrayList<String> splitByWhitespace(String toSplit) {
         return new ArrayList<>(Arrays.asList(toSplit.trim().split("\\s+")));
     }
+
+
 
 }
