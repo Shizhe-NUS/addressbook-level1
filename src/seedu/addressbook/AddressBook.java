@@ -1171,12 +1171,15 @@ public class AddressBook {
 
     private static final String PERSON_PROPERTY_NAME ="name";
     private static final String PERSON_PROPERTY_EMAIL = "email";
+    private static final String PERSON_PROPERTY_PHONE = "phone";
 
 
-    private static HashMap<String,String> setPersonProperty(String NAME,String EMAIL){
+    private static HashMap<String,String> setPersonProperty(String NAME,String EMAIL,String PHONE){
         HashMap<String,String> PERSON_IDENTIFIED = new HashMap<>();
         PERSON_IDENTIFIED.put(PERSON_PROPERTY_NAME,NAME);
         PERSON_IDENTIFIED.put(PERSON_PROPERTY_EMAIL,EMAIL);
+        PERSON_IDENTIFIED.put(PERSON_PROPERTY_PHONE,PHONE);
+        return PERSON_IDENTIFIED;
     }
 
 
