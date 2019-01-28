@@ -145,7 +145,8 @@ public class AddressBook {
     private static final int PERSON_DATA_INDEX_NAME = 0;
     private static final int PERSON_DATA_INDEX_PHONE = 1;
     private static final int PERSON_DATA_INDEX_EMAIL = 2;
-    private static final String[] infoIndex = {String.valueOf(PERSON_DATA_INDEX_NAME),
+    private static final String[] infoIndex = {
+            String.valueOf(PERSON_DATA_INDEX_NAME),
             String.valueOf(PERSON_DATA_INDEX_PHONE),
             String.valueOf(PERSON_DATA_INDEX_EMAIL)
     };
@@ -673,8 +674,11 @@ public class AddressBook {
      * @return formatted message showing internal state
      */
     private static String getMessageForFormattedPersonData(String[] person) {
-        return String.format(MESSAGE_DISPLAY_PERSON_DATA,
-                getNameFromPerson(person), getPhoneFromPerson(person), getEmailFromPerson(person));
+        return String.format(
+                MESSAGE_DISPLAY_PERSON_DATA,
+                getNameFromPerson(person),
+                getPhoneFromPerson(person),
+                getEmailFromPerson(person));
     }
 
     /**
@@ -1180,6 +1184,11 @@ public class AddressBook {
         PERSON_IDENTIFIED.put(PERSON_PROPERTY_EMAIL,EMAIL);
         PERSON_IDENTIFIED.put(PERSON_PROPERTY_PHONE,PHONE);
         return PERSON_IDENTIFIED;
+    }
+
+    private static String[] sort(HashMap<String,String>[] PERSONS_STORED){
+        String[] PERSONS = new String[PERSONS_STORED.length];
+        return PERSONS;
     }
 
 
