@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.HashMap;
 
 /*
  * NOTE : =============================================================
@@ -1166,6 +1167,16 @@ public class AddressBook {
      */
     private static ArrayList<String> splitByWhitespace(String toSplit) {
         return new ArrayList<>(Arrays.asList(toSplit.trim().split("\\s+")));
+    }
+
+    private static final String PERSON_PROPERTY_NAME ="name";
+    private static final String PERSON_PROPERTY_EMAIL = "email";
+
+
+    private static HashMap<String,String> setPersonProperty(String NAME,String EMAIL){
+        HashMap<String,String> PERSON_IDENTIFIED = new HashMap<>();
+        PERSON_IDENTIFIED.put(PERSON_PROPERTY_NAME,NAME);
+        PERSON_IDENTIFIED.put(PERSON_PROPERTY_EMAIL,EMAIL);
     }
 
 
